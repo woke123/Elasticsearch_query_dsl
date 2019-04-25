@@ -8,7 +8,6 @@
     params
     query     查询的关键词
     operator  查询的条件，默认为  or   可以改为  and
-    analyzer  分词器，默认使用standard
     lenient   报错处理，为true的时候会忽略异常报错，默认false
     
     {
@@ -17,7 +16,6 @@
            "intro": {
               "query":"is test",
               "operator": "and",
-              "analyzer":"standard",
               "lenient":true
            }
         }
@@ -30,15 +28,13 @@
     params
     query     查询的关键词
     slop      关键词位置的距离，默认0 例如："this is test" 当设置slop为1时，可以搜索 "this test"
-    analyzer  分词器，默认使用standard
     
     {
       "query": {
         "match_phrase": {
            "intro": {
               "query":"test",
-              "slop":0,
-              "analyzer":"standard"
+              "slop":0
            }
         }
       }
